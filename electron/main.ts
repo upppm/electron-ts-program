@@ -122,7 +122,7 @@ const appMenu = (fullscreenLabel: string) => {
     { label: "退出", role: "quit" }
   ];
   // 生产环境删除开发者工具菜单
-  if (!isDev) menuItems.splice(1, 1);
+  // if (!isDev) menuItems.splice(1, 1);
   const template = [
     {
       label: app.name,

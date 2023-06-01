@@ -11,7 +11,13 @@
     "dev": "vite",
     "build": "tsc && vite build && electron-builder"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "element-plus": "^2.3.5",
+    "scss": "^0.2.4",
+    "scss-loader": "^0.0.1",
+    "vue": "^3.3.4"
+  },
   "devDependencies": {
     "electron": "^19.0.6",
     "electron-builder": "^23.1.0",
