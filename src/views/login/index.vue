@@ -5,8 +5,8 @@ import { message } from "@/utils/message";
 import { loginRules } from "./utils/rule";
 import type { FormInstance } from "element-plus";
 
-// import { useUserStoreHook } from "@/store/modules/user";
-// import { initRouter, getTopMenu } from "@/router/utils";
+import { useUserStoreHook } from "@/store/modules/user";
+import { initRouter, getTopMenu } from "@/router/utils";
 import bg from "@/assets/login/bg.png";
 // import avatar from "@/assets/login/avatar.svg";
 import illustration from "@/assets/login/illustration.svg";
@@ -36,17 +36,18 @@ const onLogin = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid, fields) => {
     if (valid) {
-      // useUserStoreHook()
-      //   .loginByUsername({ username: ruleForm.username, password: "admin123" })
-      //   .then(res => {
-      //     if (res.success) {
-      //       // 获取后端路由
-      //       initRouter().then(() => {
-      //         router.push(getTopMenu(true).path);
-      //         message("登录成功", { type: "success" });
-      //       });
-      //     }
-      //   });
+      useUserStoreHook()
+        .loginByUsername({ username: ruleForm.username, password: "admin123" })
+        .then(res => {
+          console.log("---->>>",res);
+          if (res.success) {
+            // 获取后端路由
+            initRouter().then(() => {
+              router.push(getTopMenu(true).path);
+              message("登录成功", { type: "success" });
+            });
+          }
+        });
     } else {
       loading.value = false;
       return fields;

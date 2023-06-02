@@ -1,0 +1,21 @@
+$subMenuActiveText: "#fff" !default;
+$menuBg: "#001529" !default;
+$menuHover: "#4091f7" !default;
+$subMenuBg: "#0f0303" !default;
+$subMenuActiveBg: "#4091f7" !default;
+$menuText: "rgb(254 255 254 / 65%)" !default;
+$sidebarLogo: "#002140" !default;
+$menuTitleHover: "#fff";
+$menuActiveBefore: "#4091f7" !default;
+
+:export {
+  subMenuActiveText:$subMenuActiveText;
+  menuBg:$menuBg;
+  menuHover:$menuHover;
+  subMenuBg:$subMenuBg;
+  subMenuActiveBg:$subMenuActiveBg;
+  menuText:$menuText;
+  sidebarLogo:$sidebarLogo;
+  menuTitleHover:$menuTitleHover;
+  menuActiveBefore:$menuActiveBefore;
+}

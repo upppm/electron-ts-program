@@ -2,7 +2,7 @@ const Layout = () => import("@/layout/index.vue");
 
 export default [
   {
-    path: "/",
+    path: "/login",
     name: "Login",
     component: () => import("@/views/login/index.vue"),
     meta: {
@@ -27,4 +27,4 @@ export default [
   //     }
   //   ]
   // }
-];
+] as Array<RouteConfigsTable>;
